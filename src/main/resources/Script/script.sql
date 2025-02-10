@@ -1,3 +1,7 @@
+CREATE DATABASE kasvCameras;
+USE kasvCameras;
+
+
 CREATE TABLE Camera (
                         id INT PRIMARY KEY AUTO_INCREMENT,
                         brand VARCHAR(50) NOT NULL,
