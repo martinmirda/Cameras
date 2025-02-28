@@ -3,16 +3,18 @@ package sk.kas.mirda.Cameras.SchoolWork;
 
 import java.time.DayOfWeek;
 import java.time.LocalDate;
+import java.util.Comparator;
 import java.util.Date;
 import java.util.List;
-import java.util.function.Consumer;
-import java.util.function.Function;
-import java.util.function.Predicate;
-import java.util.function.Supplier;
+import java.util.function.*;
 
 @FunctionalInterface
 interface DPH {
     double calc(double price);
+}
+@FunctionalInterface
+interface MathInterface {
+    double calc(double r);
 }
 
 
@@ -94,12 +96,46 @@ public class Lambda {
 //        Supplier<Integer> randomNumber = () -> (int) (Math.random() * 17 + 1);
 //        System.out.println(randomNumber.get());
 
-        List<String> cameras = List.of("Canon", "Nikon", "Sony", "Panasonic", "Olympus", "Fujifilm", "Leica", "Pentax", "Hasselblad", "Ricoh");
-        List<String> cameras_filter = cameras.stream()
-                .filter(camera -> camera.length() > 4 && Character.toLowerCase(camera.charAt(0)) == Character.toLowerCase(camera.charAt(camera.length() - 1)))
-                .toList();
-        System.out.println(cameras_filter);
+//        List<String> cameras = List.of("Canon", "Nikon", "Sony", "Panasonic", "Olympus", "Fujifilm", "Leica", "Pentax", "Hasselblad", "Ricoh");
+//        List<String> cameras_filter = cameras.stream()
+//                .filter(camera -> camera.length() > 4 && Character.toLowerCase(camera.charAt(0)) == Character.toLowerCase(camera.charAt(camera.length() - 1)))
+//                .toList();
+//        System.out.println(cameras_filter);
 //
- }
+ // uloha1
+//        MathInterface volume = (r) -> (4.0 / 3.0) * Math.PI * Math.pow(r, 3);
+//        MathInterface surfaceArea = (r) -> 4 * Math.PI * Math.pow(r, 2);
+//
+//        double radius = 8;
+//        double volumeResult = volume.calc(radius);
+//        double surfaceAreaResult = surfaceArea.calc(radius);
+//
+//        System.out.println("Volume of the sphere with radius " + radius + " is: " + volumeResult);
+//        System.out.println("Surface area of the sphere with radius " + radius + " is: " + surfaceAreaResult);
 
-}
+//uloha 2
+        Predicate<String> startWithUpperCase = str -> !str.isEmpty() && Character.isUpperCase(str.charAt(0));
+
+        System.out.println(startWithUpperCase.test("Mato"));
+        System.out.println(startWithUpperCase.test("mato"));
+//uloha3
+//        BiConsumer<Double, Double> average = (a, b) -> {
+//            double avg = (a + b) / 2;
+//            System.out.println("Average: " + avg);
+//        };
+//
+//        average.accept(10.0, 20.0);
+
+
+// uloha 4
+
+//        List<String> list = List.of("Dom", "Les", "Eva", "Noz", "Dvere", "Stol", "Vlk");
+//
+//        list.stream()
+//                .sorted(Comparator.comparing(str -> str.charAt(str.length() - 1)))
+//                .forEach(System.out::println);
+    }
+    }
+
+
+
