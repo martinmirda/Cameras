@@ -14,7 +14,7 @@ public class Lens {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
-    private Long id;
+    private Integer id;
 
     @Column(name = "brand", nullable = false)
     private String brand;
@@ -24,4 +24,6 @@ public class Lens {
 
     @Column(name = "aperture", nullable = false)
     private String aperture;
+
+
 }
