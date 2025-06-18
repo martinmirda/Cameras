@@ -4,9 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import sk.kas.mirda.Cameras.model.Camera;
-import sk.kas.mirda.Cameras.model.Lens;
 import sk.kas.mirda.Cameras.repository.CameraRepository;
-import sk.kas.mirda.Cameras.repository.LensRepository;
 import java.util.List;
 import java.util.Optional;
 
