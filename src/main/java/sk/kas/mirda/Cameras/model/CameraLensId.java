@@ -8,6 +8,4 @@ import java.io.Serializable;
 public class CameraLensId implements Serializable {
     private Integer cameraId;
     private Integer lensId;
-
-    // equals() and hashCode() must be implemented!
 }
